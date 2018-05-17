@@ -3,37 +3,44 @@
 <head>
 	<meta charset="UTF-8">
 	<title>歌曲播放</title>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<link rel="stylesheet" href="./song.css">
+	<script>
+		var pageWidth = window.innerWidth;
+		document.write('<style>html{font-size:' + pageWidth + 'px;}</style>')
+	</script>
 </head>
 <body>
-	<div class="disc-container">
-		<div class="pointer">
-			<img src="./images/song/needle.png" alt="">
+
+	<div class="page">
+		<div class="disc-container">
+			<img class="pointer" src="./images/song/needle.png" alt="">
+			<div class="disc">
+				<img class="ring" src="./images/song/ring.png" alt="">
+				<img class="light" src="./images/song/light.png" alt="">
+				<img class="cover" src="./images/song/cover.jpg" alt="">
+			</div>
 		</div>
-		
-		<div class="disc">
-			<img class="ring" src="./images/song/ring.png" alt="">
-			<img class="light" src="./images/song/light.png" alt="">
-			<img class="cover" src="./images/song/cover.jpg" alt="">
+
+		<div class="song-description">
+			<h1>标题</h1>
+			<p>歌词1</p>
+			<p>歌词2</p>
+			<p>歌词3</p>
+			<p>歌词4</p>
+			<p>歌词5</p>
+			<p>歌词6</p>
+			<p>歌词7</p>
+			<p>歌词8</p>
+			<p>歌词9</p>
+			<p>歌词10</p>
+		</div>
+
+		<div class="links">
+			<a href="#">打开</a>
+			<a href="#">下载</a>
 		</div>
 	</div>
 
-	<div class="song-description">
-		<h1>标题</h1>
-		<p>歌词1</p>
-		<p>歌词2</p>
-		<p>歌词3</p>
-		<p>歌词4</p>
-		<p>歌词5</p>
-		<p>歌词6</p>
-		<p>歌词7</p>
-		<p>歌词8</p>
-		<p>歌词9</p>
-		<p>歌词10</p>
-	</div>
-
-	<div class="links">
-		<a href="#">打开</a>
-		<a href="#">下载</a>
-	</div>
 </body>
 </html>
