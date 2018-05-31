@@ -53,17 +53,20 @@ body {
 .disc-container .light {
 	width: 0.82rem;
 	position: absolute;
-	animation: circle 26s infinite linear;
 }
 
 .disc-container .cover {
 	width: 0.52rem;
 	position: absolute;
 	border-radius: 50%;
+}
+
+.disc-container.playing .light, .disc-container.playing .cover {
 	animation: circle 26s infinite linear;
 }
 
 .song-description {
+	flex-grow: 1;
 	color: #AEABAC;
 	text-align: center;
 	line-height: 2;
@@ -90,5 +93,27 @@ body {
 }
 
 .page > .links {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: #D43B32;
+}
 
+.page > .links > a{
+	width: 0.42rem;
+	margin: 1em;
+	line-height: 36px;
+	text-align: center;
+	border: 1px solid #D43B32;
+	background: transparent;
+	font-size: 18px;
+	color: inherit;
+	text-decoration: none;
+	border-radius: 18px;
+	letter-spacing: 2px;
+}
+
+.page > .links > a.main {
+	background: #D43B32;
+	color: white;
 }
