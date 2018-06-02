@@ -20,7 +20,7 @@ $(function() {
 	});
 
 	let audio = document.createElement('audio');
-	audio.src = 'http://fs.w.kugou.com/201806021510/914231c9b2490cdc2dd8726109687f50/G101/M0A/10/0F/pQ0DAFkQjNaAAMxXAF1wLMRlUAM318.mp3';
+	audio.src = './index.mp3';
 	audio.oncanplay = function() {
 		audio.play();
 		$('.disc-container').addClass('playing');
