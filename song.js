@@ -20,9 +20,18 @@ $(function() {
 	});
 
 	let audio = document.createElement('audio');
-	audio.src = 'http://dl.stream.qqmusic.qq.com/C400001pTnkI06GIsr.m4a?vkey=6AD20A0BBE5B1AB3A8DEBB445B0B8FCE93D451F0F4581594371BF0AFC566F0FF9431B2846E9CBD7FBA33292488C3D9CDDFA7EBCCA79FCE34&guid=2580314012&uin=0&fromtag=66';
+	audio.src = 'http://fs.w.kugou.com/201806021510/914231c9b2490cdc2dd8726109687f50/G101/M0A/10/0F/pQ0DAFkQjNaAAMxXAF1wLMRlUAM318.mp3';
 	audio.oncanplay = function() {
 		audio.play();
 		$('.disc-container').addClass('playing');
 	}
+
+	$('.icon-pause').on('click', function() {
+		audio.pause();
+		$('.disc-container').removeClass('playing');
+	})
+	$('.icon-play').on('click', function() {
+		audio.play();
+		$('.disc-container').addClass('playing');
+	})
 });

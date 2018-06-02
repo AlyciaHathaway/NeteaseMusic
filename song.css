@@ -40,6 +40,25 @@ body {
 	margin-top: 0.19rem;
 }
 
+.disc-container .icon {
+	position: absolute;
+	z-index:1;
+	fill: white;
+	width: 0.16rem;
+}
+
+.disc-container .icon-pause {
+	display: none;
+}
+
+.disc-container.playing .icon-pause {
+	display: block;
+}
+
+.disc-container.playing .icon-play {
+	display: none;
+}
+
 .disc-container .pointer {
 	width: 0.26rem;
 	position: absolute;
