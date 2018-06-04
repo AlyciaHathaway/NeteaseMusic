@@ -1,0 +1,76 @@
+* {margin: 0; padding: 0; box-sizing: border-box;}
+
+*::before, *::after {box-sizing: border-box;}
+
+ul, ol {list-style: none;}
+
+body {font-size: 16px;}
+
+.topbar {
+	background: #D43C33;
+	padding: 0.05rem 0.024rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.topbar .logo {
+	width: 0.343rem;
+}
+
+.topbar .downloadApp {
+	line-height: 0.08rem;
+	border: 1px solid white;
+	border-radius: 0.04rem;
+	display: block;
+	color: white;
+	text-decoration: none;
+	padding: 0 0.024rem;
+}
+
+.siteNav {
+
+}
+
+.siteNav > ol {
+	display: flex;
+	text-align: center;
+	border-bottom: 1px solid #ccc;
+}
+
+.siteNav > ol > li {
+	flex: 1;
+}
+
+.siteNav > ol > li.active {
+	color: #D33A31;
+}
+
+.siteNav > ol > li > span{
+	line-height: 0.11rem;
+	/* 高度写在最小的元素上面，用里面的内容撑高度 */
+	display: inline-block;
+	position: relative;
+}
+
+/* 因为用了 border-box，所以用 before 不会影响推荐音乐的高度 */
+.siteNav > ol > li.active > span::before{
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: -0.012rem;
+	right: -0.012rem;
+	border-bottom: 2px solid #D33A31;
+}
+
+.playlists {
+
+}
+
+.latestMusic {
+
+}
+
+section.art {
+	
+}
