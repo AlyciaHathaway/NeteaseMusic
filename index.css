@@ -6,6 +6,18 @@ ul, ol {list-style: none;}
 
 body {font-size: 16px;}
 
+section > h2:first-child {
+	font-size: 20px;
+	border-left: 2px solid #D33A31;
+	margin: 0.034rem 0;
+	padding-left: 0.022rem;
+	font-weight: normal;
+	/* 红色条默认和行高一样高 */
+	line-height: 1;
+}
+
+
+
 .topbar {
 	background: #D43C33;
 	padding: 0.05rem 0.024rem;
@@ -47,13 +59,13 @@ body {font-size: 16px;}
 }
 
 .siteNav > ol > li > span{
-	line-height: 0.11rem;
 	/* 高度写在最小的元素上面，用里面的内容撑高度 */
+	line-height: 0.11rem;
 	display: inline-block;
 	position: relative;
 }
 
-/* 因为用了 border-box，所以用 before 不会影响推荐音乐的高度 */
+	/* 因为用了 border-box，所以用 before 不会影响推荐音乐的高度 */
 .siteNav > ol > li.active > span::before{
 	content: '';
 	position: absolute;
@@ -64,8 +76,42 @@ body {font-size: 16px;}
 }
 
 .playlists {
-
+	margin-top: 0.014rem;
+	/* 解决父子元素 margin 合并问题，同时没有副作用 */
+	display: flow-root;
 }
+
+.playlists > ul {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	font-size: 14px;
+}
+
+	/* 使img和list的宽度相等，消除白边问题 */
+.playlists > ul > li {
+	width: 0.328rem;
+	margin-bottom: 0.038rem;
+}
+
+.playlists > ul > li img {
+	width: 0.328rem;
+}
+
+.playlists > ul > li p {
+	/* 溢出显示... */
+	display: -webkit-box;
+	margin: 0.014rem 0.014rem 0 0.014rem;
+	line-height: 18px;
+	/* 展示两行，高度是行高的2倍 */
+	height: 36px;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+
 
 .latestMusic {
 
