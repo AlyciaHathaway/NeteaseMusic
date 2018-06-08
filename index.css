@@ -1,8 +1,7 @@
 * {margin: 0; padding: 0; box-sizing: border-box;}
-
 *::before, *::after {box-sizing: border-box;}
-
 ul, ol {list-style: none;}
+h1,h2,h3 {font-weight: normal;}
 
 body {font-size: 16px;}
 
@@ -115,6 +114,39 @@ section > h2:first-child {
 
 .latestMusic {
 
+}
+
+.latestMusic > ol {
+	padding-left: calc(0.022rem + 2px);
+}
+
+.latestMusic > ol > li {
+	border-bottom: 1px solid #E2E2E3;
+	padding: 0.014rem 0;
+	position: relative;
+}
+
+.latestMusic > ol > li p {
+	font-size: 0.029rem;
+	color: #888;
+	display: flex;
+	align-items: center;
+}
+
+.latestMusic > ol > li svg.icon-play {
+	width: 0.053rem;
+	height: 0.053rem;
+	position: absolute;
+	right: 0.024rem;
+	top: 50%;
+	transform: translateY(-50%);
+	fill: #888;
+}
+
+.latestMusic > ol > li svg.icon-sq {
+	width: 0.04rem;
+	height: 0.04rem;
+	margin-right: 0.25em;
 }
 
 section.art {
