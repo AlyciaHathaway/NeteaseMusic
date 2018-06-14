@@ -127,7 +127,7 @@ section > h2:first-child {
 }
 
 .latestMusic > ol > li p {
-	font-size: 0.029rem;
+	font-size: 12px;
 	color: #888;
 	display: flex;
 	align-items: center;
@@ -150,5 +150,38 @@ section > h2:first-child {
 }
 
 section.art {
+	background: transparent url("./images/index/bg.png") no-repeat center;
+	background-size: cover;
+	/* 触发BFC，解决art和logo magin合并问题，或者直接用padding*/
+	display: flow-root;
+	padding-bottom: 0.048rem;
+}
+
+section.art .logo {
+	text-align: center;
+	/* art和logo magin会合并 */
+	margin-top: 0.17rem;
+}
+
+section.art .icon-logo {
+	width: 0.555rem;
 	
+}
+
+section.art .openApp {
+	display: block;
+	width: 0.816rem;
+	margin: 0.036rem auto 0.012rem auto;
+	text-align: center;
+	color: #D43C33;
+	border: 1px solid;
+	text-decoration: none;
+	line-height: 0.1rem;
+	border-radius: 0.1rem;
+}
+
+section.art .copyright {
+	font-size: 12px;
+	transform: scale(.75);
+	text-align: center;
 }
