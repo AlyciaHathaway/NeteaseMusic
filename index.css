@@ -6,7 +6,7 @@ h1,h2,h3 {font-weight: normal;}
 body {font-size: 16px;}
 
 section > h2:first-child {
-	font-size: 20px;
+	font-size: 17px;
 	border-left: 2px solid #D33A31;
 	margin: 0.034rem 0;
 	padding-left: 0.022rem;
@@ -116,6 +116,10 @@ section > h2:first-child {
 
 }
 
+.latestMusic > p {
+	text-align: center;
+}
+
 .latestMusic > ol {
 	padding-left: calc(0.022rem + 2px);
 }
@@ -124,6 +128,15 @@ section > h2:first-child {
 	border-bottom: 1px solid #E2E2E3;
 	padding: 0.014rem 0;
 	position: relative;
+}
+
+.latestMusic > ol > li a {
+	text-decoration: none;
+	color: inherit;
+}
+
+.latestMusic > ol > li h3 {
+	font-size: 17px;
 }
 
 .latestMusic > ol > li p {

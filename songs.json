@@ -1,0 +1,81 @@
+[
+  {
+    "id": 1,
+    "url": "./songs/遺サレタ場所.mp3",
+    "name": "遺サレタ場所",
+    "album": "尼尔: 机械纪元",
+    "author": "NieR"
+  },
+
+  {
+    "id": 2,
+    "url": "./songs/雨の日の真実.mp3",
+    "name": "雨の日の真実",
+    "album": "英雄伝説 碧の轨迹",
+    "author": "Falcom"
+  },
+
+  {
+    "id": 3,
+    "url": "./songs/雨音の学院.mp3",
+    "name": "雨音の学院",
+    "album": "英雄伝説 闪の轨迹",
+    "author": "Falcom"
+  },
+
+  {
+    "id": 4,
+    "url": "./songs/遺サレタ場所.mp3",
+    "name": "遺サレタ場所",
+    "album": "尼尔: 机械纪元",
+    "author": "NieR"
+  },
+
+  {
+    "id": 5,
+    "url": "./songs/雨の日の真実.mp3",
+    "name": "雨の日の真実",
+    "album": "英雄伝説 碧の轨迹",
+    "author": "Falcom"
+  },
+
+  {
+    "id": 6,
+    "url": "./songs/雨音の学院.mp3",
+    "name": "雨音の学院",
+    "album": "英雄伝説 闪の轨迹",
+    "author": "Falcom"
+  },
+
+  {
+    "id": 7,
+    "url": "./songs/遺サレタ場所.mp3",
+    "name": "遺サレタ場所",
+    "album": "尼尔: 机械纪元",
+    "author": "NieR"
+  },
+
+  {
+    "id": 8,
+    "url": "./songs/雨の日の真実.mp3",
+    "name": "雨の日の真実",
+    "album": "英雄伝説 碧の轨迹",
+    "author": "Falcom"
+  },
+
+  {
+    "id": 9,
+    "url": "./songs/雨音の学院.mp3",
+    "name": "雨音の学院",
+    "album": "英雄伝説 闪の轨迹",
+    "author": "Falcom"
+  },
+
+  {
+    "id": 10,
+    "url": "./songs/遺サレタ場所.mp3",
+    "name": "遺サレタ場所",
+    "album": "尼尔: 机械纪元",
+    "author": "NieR"
+  }
+]
