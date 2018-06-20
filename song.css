@@ -78,10 +78,12 @@ body {
 	width: 0.52rem;
 	position: absolute;
 	border-radius: 50%;
+	animation: circle 26s infinite linear;
+	animation-play-state: paused;
 }
 
 .disc-container.playing .light, .disc-container.playing .cover {
-	animation: circle 26s infinite linear;
+	animation-play-state: running;
 }
 
 .song-description {
