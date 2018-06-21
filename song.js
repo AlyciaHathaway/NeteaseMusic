@@ -8,9 +8,15 @@ $(function() {
 		let song = songs.filter((s)=> {
 			return s.id === id;
 		})[0]
-		let {url} = song;
-		console.log(url);
+		let {url, name, lyric} = song;
+		console.log(url, name, lyric);
 
+		initPlayer.call(undefined, url);
+		initText(name, lyric);
+	})
+
+	// 初始化音乐播放
+	function initPlayer(url) {
 		let audio = document.createElement('audio');
 		audio.src = url;
 		audio.oncanplay = function() {
@@ -26,10 +32,23 @@ $(function() {
 			audio.play();
 			$('.disc-container').addClass('playing');
 		})
-	})
+	}
 
-	$.get('./lyric.json').then(function(object) {
-		let {lyric} = object;
+	// 初始化标题、歌词
+	function initText(name, lyric) {
+		$('.song-description > h1').text(name);
+
+		if (lyric === '') {
+			let $lyric = $('.lyric');
+			let $p = $('<p/>');
+			$p.text('暂无歌词').appendTo($lyric);
+		}else {
+			parseLyric.call(undefined, lyric);
+		}
+	}
+
+	// 解析歌词
+	function parseLyric(lyric) {
 		let array = lyric.split('\n');
 		let regex =	/^\[(.+)\](.*)$/;
 		array = array.map(function(string) {
@@ -46,6 +65,6 @@ $(function() {
 			$p.attr('data-time', object.time).text(object.words);
 			$p.appendTo($lyric.children('.lines'));
 		})
-	});
+	}
 
 });
