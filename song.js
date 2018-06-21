@@ -32,6 +32,41 @@ $(function() {
 			audio.play();
 			$('.disc-container').addClass('playing');
 		})
+
+		setInterval(()=> {
+			let seconds = audio.currentTime;
+			// 二进制取反再取反，抛弃小数部分
+			let minutes = ~~(seconds / 60);
+			let left = seconds - minutes * 60;
+			let time = `${pad(minutes)}:${pad(left)}`;
+
+			// 二分查找对应歌词
+			let $lines = $('.lines > p');
+			let $whichLine;
+			for (let i=0; i<$lines.length; i++) {
+				let currentLineTime = $lines.eq(i).attr('data-time');
+				let nextLineTime = $lines.eq(i+1).attr('data-time');
+				// jQuery 始终会返回一个数组
+				if ($lines.eq(i+1).length !== 0 && currentLineTime < time && nextLineTime > time) {
+					$whichLine = $lines.eq(i);
+					break;
+				}
+			}
+			// 计算歌词滚动高度
+			if ($whichLine) {
+				$whichLine.addClass('active').prev().removeClass('active');
+				let currentLineTop = $whichLine.offset().top;
+				let linesTop = $('.lines').offset().top;
+				let delta = currentLineTop - linesTop - $('.lyric').height()/3;
+				console.log(currentLineTop, linesTop, delta);
+				$('.lines').css('transform', `translateY(-${delta}px)`);
+			}
+		}, 400)
+	}
+
+	// 垫 0
+	function pad(number) {
+		return number >= 10 ? number + '' : '0' + number;
 	}
 
 	// 初始化标题、歌词
